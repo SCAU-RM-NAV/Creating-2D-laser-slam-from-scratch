@@ -1,6 +1,6 @@
 # Creating-2D-laser-slam-from-scratch
 
-###现已更新
+### 现已更新
 **运行环境**
 - ubuntu20.04
 - ros noetic 
