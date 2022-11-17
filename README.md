@@ -23,7 +23,9 @@ sudo apt-get update
 sudo apt-get install intel-mkl-64bit-2018.2-046
 
 ```
+**部署**
 
+`catkin_make`
 
 ## 这个项目的目的
 
