@@ -25,9 +25,9 @@ open_karto
 
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS ${ROS_CXX_DEPENDENCIES} )
-
+set(Boost_INCLUDE_DIRS /usr/include/boost)
 ## System dependencies are found with CMake's conventions
-find_package(Boost REQUIRED COMPONENTS system)
+find_package(Boost REQUIRED COMPONENTS serialization system filesystem thread date_time timer)
 
 # Find Eigen3 (from http://wiki.ros.org/jade/Migration)
 find_package(Eigen3 REQUIRED)
@@ -90,7 +90,6 @@ target_link_libraries(${PROJECT_NAME}_karto_slam_node
   sba
   ${CERES_LIBRARIES}
   gtsam
-
   ${G2O_LIBRARIES}
   ${SUITESPARSE_LIBRARIES}
 )
