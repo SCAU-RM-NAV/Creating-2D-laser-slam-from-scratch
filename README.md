@@ -13,7 +13,17 @@ g2o::OptimizationAlgorithmLevenberg *solver =
 ```
 **需要自己安装**
 1. pcl库
-2. gtsam 4.0.2库安装时需要 intel mkl库 最后一步的cmake install需要sudo
+2. 先尝试安装 gtsam 4.0.2库，若报没有mkl库则按第3步安装
+```
+cd ../../
+unzip gtsam-4.0.2.zip
+cd gtsam-4.0.2
+mkdir build
+cd build
+cmake .. 
+sudo make install
+```
+2. intel mkl库安装 最后一步的cmake install需要sudo
 ```
 wget https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS-2019.PUB
 
@@ -23,6 +33,9 @@ sudo apt-get update
 sudo apt-get install intel-mkl-64bit-2018.2-046
 
 ```
+
+
+
 **部署**
 
 `catkin_make`
